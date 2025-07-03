@@ -11,7 +11,7 @@
 
 #property copyright "Copyright 2023, Fortesense Labs."
 #property link "https://www.github.com/FortesenseLabs"
-#property version "0.10"
+#property version "000.100"
 #property description "Wise Finance Socket Server"
 // #define SYMBOLS_TRADING "EURUSD", "GBPUSD", "USDJPY", "USDCHF"
 // #define SYMBOLS_TRADING "Step Index", "Boom 1000 Index", "Volatility 100 Index", "Volatility 25 Index" // get all symbols
@@ -69,6 +69,7 @@ datetime tm;
 // Error handling
 ControlErrors mControl;
 
+
 //+------------------------------------------------------------------+
 //| Expert initialization function                                   |
 //+------------------------------------------------------------------+
@@ -84,11 +85,11 @@ void OnInit()
 
   // Establish socket connection
   // liveSocket = ConnectSocket(DATA_COLLECTOR_HOST, DATA_COLLECTOR_PORT);
-  // if (liveSocket == INVALID_HANDLE)
+  // if (liveSocket == INVALID_SOCKET64)
   // {
-  //   Print("Failed to establish socket connection");
-  //   Print("Retrying...");
-  //   // return;
+  //  Print("❌ Failed to establish socket connection");
+  //  Print("Retrying...");
+  //  return;
   // }
 
   // Split the trading symbols string into an array
